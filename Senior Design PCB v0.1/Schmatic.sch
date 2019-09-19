@@ -1068,29 +1068,6 @@ TS-003</description>
 <vertex x="2.5654" y="3.937"/>
 </polygon>
 </package>
-<package name="RESPACK_4X0603">
-<wire x1="-1.6" y1="0.8" x2="1.6" y2="0.8" width="0.2032" layer="51"/>
-<wire x1="1.6" y1="0.8" x2="1.6" y2="-0.8" width="0.2032" layer="51"/>
-<wire x1="1.6" y1="-0.8" x2="-1.6" y2="-0.8" width="0.2032" layer="51"/>
-<wire x1="-1.6" y1="-0.8" x2="-1.6" y2="0.8" width="0.2032" layer="51"/>
-<wire x1="-1.9" y1="1.4" x2="1.9" y2="1.4" width="0.127" layer="39"/>
-<wire x1="1.9" y1="1.4" x2="1.9" y2="-1.4" width="0.127" layer="39"/>
-<wire x1="-1.9" y1="-1.4" x2="-1.9" y2="1.4" width="0.127" layer="39"/>
-<wire x1="1.9" y1="1.4" x2="1.9" y2="-1.4" width="0.2032" layer="21"/>
-<wire x1="-1.9" y1="-1.4" x2="-1.9" y2="1.4" width="0.2032" layer="21"/>
-<smd name="8" x="-1.3" y="0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="1" x="-1.3" y="-0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="7" x="-0.4" y="0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="6" x="0.4" y="0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="5" x="1.3" y="0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="4" x="1.3" y="-0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="2" x="-0.4" y="-0.85" dx="0.45" dy="0.9" layer="1"/>
-<smd name="3" x="0.4" y="-0.85" dx="0.45" dy="0.9" layer="1"/>
-<text x="-1.6" y="1.6" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-1.6" y="-2.4" size="0.4064" layer="25" ratio="10">&gt;VALUE</text>
-<rectangle x1="-1.55" y1="-0.5" x2="1.55" y2="0.5" layer="51"/>
-<wire x1="-1.9" y1="-1.4" x2="1.9" y2="-1.4" width="0.127" layer="39"/>
-</package>
 <package name="0805-NO">
 <wire x1="-0.381" y1="0.66" x2="0.381" y2="0.66" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.66" x2="0.381" y2="-0.66" width="0.1016" layer="51"/>
@@ -2719,34 +2696,6 @@ Op. Temp: -40~85°C</text>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RESISTOR_4PACK" prefix="R" uservalue="yes">
-<description>&lt;b&gt;Resistor Packs (4 resistors)&lt;/b&gt;
-&lt;p&gt;&lt;b&gt;4 x 0603&lt;/b&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;10K 1/16W - Digikey: YC164J-10KCT-ND&lt;/li&gt;&lt;/ul&gt;</description>
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="10.16" swaplevel="1"/>
-<gate name="G$2" symbol="RESISTOR" x="0" y="2.54" swaplevel="1"/>
-<gate name="G$3" symbol="RESISTOR" x="0" y="-5.08" swaplevel="1"/>
-<gate name="G$4" symbol="RESISTOR" x="0" y="-12.7" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="RESPACK_4X0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="8"/>
-<connect gate="G$2" pin="1" pad="2"/>
-<connect gate="G$2" pin="2" pad="7"/>
-<connect gate="G$3" pin="1" pad="3"/>
-<connect gate="G$3" pin="2" pad="6"/>
-<connect gate="G$4" pin="1" pad="4"/>
-<connect gate="G$4" pin="2" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="VCC" prefix="P+">
 <description>&lt;b&gt;VCC SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -3217,6 +3166,110 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
+<package name="AXIAL-0.3">
+<description>&lt;h3&gt;AXIAL-0.3&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.&lt;/p&gt;</description>
+<wire x1="-2.54" y1="0.762" x2="2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="3.81" y="0" drill="0.9" diameter="1.8796"/>
+<text x="0" y="1.016" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.016" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+</package>
+<package name="AXIAL-0.1">
+<description>&lt;h3&gt;AXIAL-0.1&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.&lt;/p&gt;</description>
+<wire x1="0" y1="-0.762" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="0.254" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="-0.254" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-1.27" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="1.27" y="0" drill="0.9" diameter="1.8796"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.143" size="0.6096" layer="21" font="vector" ratio="20" align="top-center">&gt;Value</text>
+</package>
+<package name="AXIAL-0.1-KIT">
+<description>&lt;h3&gt;AXIAL-0.1-KIT&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of the AXIAL-0.1 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;</description>
+<wire x1="0" y1="-0.762" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="0.254" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="-0.254" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-1.27" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<pad name="P$2" x="1.27" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+<circle x="-1.27" y="0" radius="0.4572" width="0" layer="29"/>
+<circle x="-1.27" y="0" radius="1.016" width="0" layer="30"/>
+<circle x="1.27" y="0" radius="1.016" width="0" layer="30"/>
+<circle x="-1.27" y="0" radius="0.4572" width="0" layer="29"/>
+<circle x="1.27" y="0" radius="0.4572" width="0" layer="29"/>
+</package>
+<package name="AXIAL-0.3-KIT">
+<description>&lt;h3&gt;AXIAL-0.3-KIT&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of the AXIAL-0.3 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;</description>
+<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="2.54" y2="0" width="0.254" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="-2.54" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.254" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<pad name="P$2" x="3.81" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<text x="0" y="1.524" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.524" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<polygon width="0.127" layer="30">
+<vertex x="3.8201" y="-0.9449" curve="-90"/>
+<vertex x="2.8652" y="-0.0152" curve="-90.011749"/>
+<vertex x="3.8176" y="0.9602" curve="-90"/>
+<vertex x="4.7676" y="-0.0178" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="3.8176" y="-0.4369" curve="-90.012891"/>
+<vertex x="3.3731" y="-0.0127" curve="-90"/>
+<vertex x="3.8176" y="0.4546" curve="-90"/>
+<vertex x="4.2595" y="-0.0025" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-3.8075" y="-0.9525" curve="-90"/>
+<vertex x="-4.7624" y="-0.0228" curve="-90.011749"/>
+<vertex x="-3.81" y="0.9526" curve="-90"/>
+<vertex x="-2.86" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-3.81" y="-0.4445" curve="-90.012891"/>
+<vertex x="-4.2545" y="-0.0203" curve="-90"/>
+<vertex x="-3.81" y="0.447" curve="-90"/>
+<vertex x="-3.3681" y="-0.0101" curve="-90.012967"/>
+</polygon>
+</package>
+<package name="0402">
+<description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
+<wire x1="0.2704" y1="-0.2286" x2="-0.2704" y2="-0.2286" width="0.1524" layer="51"/>
+<wire x1="-1.2" y1="0.65" x2="1.2" y2="0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="0.65" x2="1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="-0.65" x2="-1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
+<smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR@1">
@@ -3344,6 +3397,204 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-12083" constant="no"/>
 <attribute name="VALUE" value="5.1k" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="10KOHM" prefix="R">
+<description>&lt;h3&gt;10kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-HORIZ-1/4W-1%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-1%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-1%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-5%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/4W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-1%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/6W-5%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/6W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/6W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/6W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="22OHM" prefix="R">
+<description>&lt;h3&gt;22Ω resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0402-1/10W-1%" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12427"/>
+<attribute name="VALUE" value="22"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08698"/>
+<attribute name="VALUE" value="22"/>
 </technology>
 </technologies>
 </device>
@@ -12403,17 +12654,412 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Resistors" urn="urn:adsk.eagle:library:532">
+<description>&lt;h3&gt;SparkFun Resistors&lt;/h3&gt;
+This library contains resistors. Reference designator:R. 
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="0603" urn="urn:adsk.eagle:footprint:39615/1" library_version="1">
+<description>&lt;p&gt;&lt;b&gt;Generic 1608 (0603) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.6" y1="0.7" x2="1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="0.7" x2="1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="1.6" y1="-0.7" x2="-1.6" y2="-0.7" width="0.0508" layer="39"/>
+<wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
+<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
+<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
+<package name="AXIAL-0.3" urn="urn:adsk.eagle:footprint:39622/1" library_version="1">
+<description>&lt;h3&gt;AXIAL-0.3&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.&lt;/p&gt;</description>
+<wire x1="-2.54" y1="0.762" x2="2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="3.81" y="0" drill="0.9" diameter="1.8796"/>
+<text x="0" y="1.016" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.016" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+</package>
+<package name="AXIAL-0.1" urn="urn:adsk.eagle:footprint:39620/1" library_version="1">
+<description>&lt;h3&gt;AXIAL-0.1&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.&lt;/p&gt;</description>
+<wire x1="0" y1="-0.762" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="0.254" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="-0.254" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-1.27" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="1.27" y="0" drill="0.9" diameter="1.8796"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.143" size="0.6096" layer="21" font="vector" ratio="20" align="top-center">&gt;Value</text>
+</package>
+<package name="AXIAL-0.1-KIT" urn="urn:adsk.eagle:footprint:39621/1" library_version="1">
+<description>&lt;h3&gt;AXIAL-0.1-KIT&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of the AXIAL-0.1 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;</description>
+<wire x1="0" y1="-0.762" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="0.254" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<wire x1="0" y1="0" x2="-0.254" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-1.27" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<pad name="P$2" x="1.27" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;Value</text>
+<circle x="-1.27" y="0" radius="0.4572" width="0" layer="29"/>
+<circle x="-1.27" y="0" radius="1.016" width="0" layer="30"/>
+<circle x="1.27" y="0" radius="1.016" width="0" layer="30"/>
+<circle x="-1.27" y="0" radius="0.4572" width="0" layer="29"/>
+<circle x="1.27" y="0" radius="0.4572" width="0" layer="29"/>
+</package>
+<package name="AXIAL-0.3-KIT" urn="urn:adsk.eagle:footprint:39623/1" library_version="1">
+<description>&lt;h3&gt;AXIAL-0.3-KIT&lt;/h3&gt;
+&lt;p&gt;Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of the AXIAL-0.3 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;</description>
+<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="1.27" x2="2.54" y2="0" width="0.254" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="-1.27" x2="-2.54" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.254" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<pad name="P$2" x="3.81" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<text x="0" y="1.524" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.524" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<polygon width="0.127" layer="30">
+<vertex x="3.8201" y="-0.9449" curve="-90"/>
+<vertex x="2.8652" y="-0.0152" curve="-90.011749"/>
+<vertex x="3.8176" y="0.9602" curve="-90"/>
+<vertex x="4.7676" y="-0.0178" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="3.8176" y="-0.4369" curve="-90.012891"/>
+<vertex x="3.3731" y="-0.0127" curve="-90"/>
+<vertex x="3.8176" y="0.4546" curve="-90"/>
+<vertex x="4.2595" y="-0.0025" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-3.8075" y="-0.9525" curve="-90"/>
+<vertex x="-4.7624" y="-0.0228" curve="-90.011749"/>
+<vertex x="-3.81" y="0.9526" curve="-90"/>
+<vertex x="-2.86" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-3.81" y="-0.4445" curve="-90.012891"/>
+<vertex x="-4.2545" y="-0.0203" curve="-90"/>
+<vertex x="-3.81" y="0.447" curve="-90"/>
+<vertex x="-3.3681" y="-0.0101" curve="-90.012967"/>
+</polygon>
+</package>
+</packages>
+<packages3d>
+<package3d name="0603" urn="urn:adsk.eagle:package:39650/1" type="box" library_version="1">
+<description>Generic 1608 (0603) package
+0.2mm courtyard excess rounded to nearest 0.05mm.</description>
+<packageinstances>
+<packageinstance name="0603"/>
+</packageinstances>
+</package3d>
+<package3d name="AXIAL-0.3" urn="urn:adsk.eagle:package:39658/1" type="box" library_version="1">
+<description>AXIAL-0.3
+Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.</description>
+<packageinstances>
+<packageinstance name="AXIAL-0.3"/>
+</packageinstances>
+</package3d>
+<package3d name="AXIAL-0.1" urn="urn:adsk.eagle:package:39656/1" type="box" library_version="1">
+<description>AXIAL-0.1
+Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.</description>
+<packageinstances>
+<packageinstance name="AXIAL-0.1"/>
+</packageinstances>
+</package3d>
+<package3d name="AXIAL-0.1-KIT" urn="urn:adsk.eagle:package:39653/1" type="box" library_version="1">
+<description>AXIAL-0.1-KIT
+Commonly used for 1/4W through-hole resistors. 0.1" pitch between holes.
+Warning: This is the KIT version of the AXIAL-0.1 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.</description>
+<packageinstances>
+<packageinstance name="AXIAL-0.1-KIT"/>
+</packageinstances>
+</package3d>
+<package3d name="AXIAL-0.3-KIT" urn="urn:adsk.eagle:package:39661/1" type="box" library_version="1">
+<description>AXIAL-0.3-KIT
+Commonly used for 1/4W through-hole resistors. 0.3" pitch between holes.
+Warning: This is the KIT version of the AXIAL-0.3 package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.</description>
+<packageinstances>
+<packageinstance name="AXIAL-0.3-KIT"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="RESISTOR" urn="urn:adsk.eagle:symbol:39614/1" library_version="1">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="0" y="1.524" size="1.778" layer="95" font="vector" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.524" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="10KOHM" urn="urn:adsk.eagle:component:39764/1" prefix="R" library_version="1">
+<description>&lt;h3&gt;10kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-HORIZ-1/4W-1%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-1%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39656/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-1%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/4W-5%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39656/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/4W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/4W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-09435"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/4W-1%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-12183"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT-1/6W-5%" package="AXIAL-0.1">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39656/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-VERT_KIT-1/6W-5%" package="AXIAL-0.1-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39653/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ-1/6W-5%" package="AXIAL-0.3">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39658/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-HORIZ_KIT-1/6W-5%" package="AXIAL-0.3-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39661/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08375"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39650/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.3048" drill="0.3048">
-<clearance class="0" value="0.254"/>
+<class number="0" name="default" width="0.2032" drill="0.2032">
+<clearance class="0" value="0.2032"/>
 </class>
-<class number="1" name="sig" width="0.2032" drill="0.2032">
-<clearance class="1" value="0.2032"/>
+<class number="1" name="sig" width="0.3048" drill="0.3048">
+<clearance class="1" value="0.254"/>
+</class>
+<class number="2" name="Power" width="0.508" drill="0.508">
+<clearance class="2" value="0.254"/>
+</class>
+<class number="3" name="HighSpeedSig" width="0.1524" drill="0.1524">
+<clearance class="3" value="0.254"/>
+</class>
+<class number="4" name="StepperOut" width="0.381" drill="0.381">
+<clearance class="4" value="0.254"/>
+</class>
+<class number="5" name="LowPower" width="0.3048" drill="0.3048">
+<clearance class="5" value="0.254"/>
 </class>
 </classes>
 <parts>
@@ -12439,7 +13085,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$8" library="microbuilder" deviceset="GND" device=""/>
 <part name="R12" library="microbuilder" deviceset="RESISTOR" device="_0603_NOOUT" value="100K"/>
 <part name="U$25" library="microbuilder" deviceset="GND" device=""/>
-<part name="R13" library="microbuilder" deviceset="RESISTOR_4PACK" device="" value="10K"/>
 <part name="C4" library="microbuilder" deviceset="CAP_CERAMIC" device="0603_NO" value="1uF"/>
 <part name="U$42" library="microbuilder" deviceset="GND" device=""/>
 <part name="R2" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
@@ -12451,12 +13096,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P+7" library="microbuilder" deviceset="VCC" device=""/>
 <part name="U$54" library="microbuilder" deviceset="GND" device=""/>
 <part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="10uF"/>
-<part name="R4" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="U$57" library="microbuilder" deviceset="GND" device=""/>
 <part name="Q4" library="microbuilder" deviceset="MOSFET-P" device="TO252" value="AOD417"/>
 <part name="U$62" library="microbuilder" deviceset="GND" device=""/>
-<part name="R6" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
-<part name="R8" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
+<part name="R8" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="SERVO1" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
 <part name="SERVO2" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
 <part name="SERVO3" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
@@ -12473,8 +13118,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="U$6" library="microbuilder" deviceset="GND" device=""/>
 <part name="C10" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="0.1uF"/>
-<part name="R1" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
-<part name="R3" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
+<part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
+<part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="10KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
 <part name="U4" library="Testing" deviceset="HX711" device="HX711" value="HX711"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_PNP" device="MMBT4403" value="MMBT4403"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="100OHM-1/10W-1%(0603)" device="" value="100"/>
@@ -12724,21 +13369,21 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="5V_IN" library="XT60PW-M" deviceset="XT60PW-M" device=""/>
 <part name="GND82" library="supply1" deviceset="GND" device=""/>
 <part name="GND83" library="supply1" deviceset="GND" device=""/>
-<part name="R71" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R72" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R73" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R74" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R75" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R76" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R77" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R78" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R79" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R80" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R81" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R82" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R83" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R84" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
-<part name="R85" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="220"/>
+<part name="R71" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R72" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R73" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R74" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R75" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R76" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R77" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R78" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R79" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R80" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R81" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R82" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R83" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R84" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
+<part name="R85" library="SparkFun-Resistors" deviceset="22OHM" device="-0603-1/10W-1%" value="22"/>
 <part name="LIQUID_LATCH" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
 <part name="SOLID_LATCH" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
 <part name="CATCHER_LATCH" library="NewKevinMade" deviceset="S3B-PH-SM4_TB" device=""/>
@@ -12780,6 +13425,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$48" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="U$49" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
 <part name="U$50" library="microbuilder" deviceset="MOUNTINGHOLE" device="2.5"/>
+<part name="R13" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -13001,10 +13647,6 @@ Need to tie Pin#8 and #9</text>
 </instance>
 <instance part="U$25" gate="G$1" x="363.22" y="104.14" smashed="yes">
 <attribute name="VALUE" x="361.696" y="101.6" size="1.27" layer="96"/>
-</instance>
-<instance part="R13" gate="G$3" x="477.52" y="129.54" smashed="yes" rot="R270">
-<attribute name="NAME" x="480.06" y="129.54" size="1.27" layer="95" font="vector" rot="R270" align="center"/>
-<attribute name="VALUE" x="477.52" y="129.54" size="1.016" layer="96" font="vector" ratio="15" rot="R270" align="center"/>
 </instance>
 <instance part="C4" gate="G$1" x="487.68" y="111.76" smashed="yes">
 <attribute name="NAME" x="485.39" y="113.01" size="1.27" layer="95" font="vector" rot="R90" align="center"/>
@@ -14211,11 +14853,15 @@ Need to tie Pin#8 and #9</text>
 <instance part="U$48" gate="G$1" x="561.34" y="190.5" smashed="yes"/>
 <instance part="U$49" gate="G$1" x="556.26" y="190.5" smashed="yes"/>
 <instance part="U$50" gate="G$1" x="551.18" y="190.5" smashed="yes"/>
+<instance part="R13" gate="G$1" x="477.52" y="129.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="480.06" y="129.54" size="1.27" layer="95" font="vector" rot="R90" align="center"/>
+<attribute name="VALUE" x="474.98" y="129.54" size="1.016" layer="96" font="vector" ratio="15" rot="R90" align="center"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U$37" gate="G$1" pin="GND"/>
 <pinref part="X2" gate="G$1" pin="GND"/>
@@ -14982,7 +15628,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="ROTARY_SWITCH" gate="G$1" pin="4"/>
 </segment>
 </net>
-<net name="RESET" class="1">
+<net name="RESET" class="0">
 <segment>
 <wire x1="233.68" y1="71.12" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
 <label x="218.44" y="71.12" size="1.778" layer="95"/>
@@ -15011,7 +15657,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="Q2" gate="G$1" pin="C"/>
 </segment>
 </net>
-<net name="RXD0" class="1">
+<net name="RXD0" class="3">
 <segment>
 <wire x1="233.68" y1="38.1" x2="218.44" y2="38.1" width="0.1524" layer="91"/>
 <label x="218.44" y="38.1" size="1.778" layer="95"/>
@@ -15023,7 +15669,7 @@ Need to tie Pin#8 and #9</text>
 <label x="441.96" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TXD0" class="1">
+<net name="TXD0" class="3">
 <segment>
 <wire x1="218.44" y1="35.56" x2="233.68" y2="35.56" width="0.1524" layer="91"/>
 <label x="218.44" y="35.56" size="1.778" layer="95"/>
@@ -15035,42 +15681,42 @@ Need to tie Pin#8 and #9</text>
 <label x="441.96" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX_CUS" class="1">
+<net name="TX_CUS" class="0">
 <segment>
 <wire x1="284.48" y1="45.72" x2="297.18" y2="45.72" width="0.1524" layer="91"/>
 <label x="287.02" y="45.72" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO26/DAC2/A2_9"/>
 </segment>
 </net>
-<net name="2RX" class="1">
+<net name="2RX" class="3">
 <segment>
 <wire x1="284.48" y1="66.04" x2="297.18" y2="66.04" width="0.1524" layer="91"/>
 <label x="287.02" y="66.04" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO16"/>
 </segment>
 </net>
-<net name="2TX" class="1">
+<net name="2TX" class="3">
 <segment>
 <wire x1="297.18" y1="63.5" x2="284.48" y2="63.5" width="0.1524" layer="91"/>
 <label x="287.02" y="63.5" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO17"/>
 </segment>
 </net>
-<net name="MOSI" class="1">
+<net name="MOSI" class="3">
 <segment>
 <wire x1="284.48" y1="60.96" x2="297.18" y2="60.96" width="0.1524" layer="91"/>
 <label x="287.02" y="60.96" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO18"/>
 </segment>
 </net>
-<net name="A5_IO4" class="1">
+<net name="A5_IO4" class="0">
 <segment>
 <wire x1="284.48" y1="81.28" x2="297.18" y2="81.28" width="0.1524" layer="91"/>
 <label x="287.02" y="81.28" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO4/A2_0"/>
 </segment>
 </net>
-<net name="SDA" class="1">
+<net name="SDA" class="3">
 <segment>
 <wire x1="284.48" y1="50.8" x2="297.18" y2="50.8" width="0.1524" layer="91"/>
 <label x="287.02" y="50.8" size="1.778" layer="95"/>
@@ -15100,7 +15746,7 @@ Need to tie Pin#8 and #9</text>
 <label x="76.2" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SCL" class="1">
+<net name="SCL" class="3">
 <segment>
 <wire x1="284.48" y1="53.34" x2="297.18" y2="53.34" width="0.1524" layer="91"/>
 <label x="287.02" y="53.34" size="1.778" layer="95"/>
@@ -15130,70 +15776,70 @@ Need to tie Pin#8 and #9</text>
 <label x="76.2" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="IO32_A7" class="1">
+<net name="IO32_A7" class="0">
 <segment>
 <wire x1="284.48" y1="40.64" x2="297.18" y2="40.64" width="0.1524" layer="91"/>
 <label x="287.02" y="40.64" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO32/A1_4/X32P"/>
 </segment>
 </net>
-<net name="RX_CUS" class="1">
+<net name="RX_CUS" class="0">
 <segment>
 <wire x1="284.48" y1="43.18" x2="297.18" y2="43.18" width="0.1524" layer="91"/>
 <label x="287.02" y="43.18" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO27/A2_7"/>
 </segment>
 </net>
-<net name="MISO" class="1">
+<net name="MISO" class="3">
 <segment>
 <wire x1="297.18" y1="58.42" x2="284.48" y2="58.42" width="0.1524" layer="91"/>
 <label x="287.02" y="58.42" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO19"/>
 </segment>
 </net>
-<net name="SCK" class="1">
+<net name="SCK" class="3">
 <segment>
 <wire x1="284.48" y1="78.74" x2="297.18" y2="78.74" width="0.1524" layer="91"/>
 <label x="287.02" y="78.74" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO5"/>
 </segment>
 </net>
-<net name="A4_IO36" class="1">
+<net name="A4_IO36" class="0">
 <segment>
 <wire x1="233.68" y1="68.58" x2="218.44" y2="68.58" width="0.1524" layer="91"/>
 <label x="218.44" y="68.58" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO36/SEN_VP/A1_0"/>
 </segment>
 </net>
-<net name="A3_I39" class="1">
+<net name="A3_I39" class="0">
 <segment>
 <wire x1="218.44" y1="66.04" x2="233.68" y2="66.04" width="0.1524" layer="91"/>
 <label x="218.44" y="66.04" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO39/SEN_VN/A1_3"/>
 </segment>
 </net>
-<net name="A2_I34" class="1">
+<net name="A2_I34" class="0">
 <segment>
 <wire x1="284.48" y1="35.56" x2="297.18" y2="35.56" width="0.1524" layer="91"/>
 <label x="287.02" y="35.56" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="I34/A1_6"/>
 </segment>
 </net>
-<net name="A13_I35" class="1">
+<net name="A13_I35" class="0">
 <segment>
 <wire x1="284.48" y1="33.02" x2="297.18" y2="33.02" width="0.1524" layer="91"/>
 <label x="287.02" y="33.02" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="I35/A1_7"/>
 </segment>
 </net>
-<net name="IO15_A8" class="1">
+<net name="IO15_A8" class="0">
 <segment>
 <wire x1="284.48" y1="68.58" x2="297.18" y2="68.58" width="0.1524" layer="91"/>
 <label x="287.02" y="68.58" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO15/A2_3"/>
 </segment>
 </net>
-<net name="IO21" class="1">
+<net name="IO21" class="0">
 <segment>
 <wire x1="284.48" y1="55.88" x2="297.18" y2="55.88" width="0.1524" layer="91"/>
 <label x="287.02" y="55.88" size="1.778" layer="95"/>
@@ -15212,7 +15858,7 @@ Need to tie Pin#8 and #9</text>
 <label x="449.58" y="104.14" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="VCC" class="0">
+<net name="VCC" class="5">
 <segment>
 <pinref part="X2" gate="G$1" pin="3.3V"/>
 <wire x1="256.54" y1="93.98" x2="256.54" y2="96.52" width="0.1524" layer="91"/>
@@ -15235,9 +15881,9 @@ Need to tie Pin#8 and #9</text>
 <wire x1="431.8" y1="121.92" x2="431.8" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R13" gate="G$3" pin="1"/>
 <wire x1="477.52" y1="137.16" x2="477.52" y2="134.62" width="0.1524" layer="91"/>
 <label x="477.52" y="137.16" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="505.46" y1="124.46" x2="505.46" y2="121.92" width="0.1524" layer="91"/>
@@ -15416,21 +16062,21 @@ Need to tie Pin#8 and #9</text>
 <label x="43.18" y="86.36" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="BUZZER" class="1">
+<net name="BUZZER" class="0">
 <segment>
 <wire x1="284.48" y1="48.26" x2="297.18" y2="48.26" width="0.1524" layer="91"/>
 <label x="287.02" y="48.26" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO25/DAC1/A2_8"/>
 </segment>
 </net>
-<net name="GPIO2" class="1">
+<net name="GPIO2" class="0">
 <segment>
 <wire x1="284.48" y1="83.82" x2="297.18" y2="83.82" width="0.1524" layer="91"/>
 <label x="287.02" y="83.82" size="1.778" layer="95"/>
 <pinref part="X2" gate="G$1" pin="IO2/A2_2"/>
 </segment>
 </net>
-<net name="SD_CS_MCU" class="1">
+<net name="SD_CS_MCU" class="0">
 <segment>
 <wire x1="284.48" y1="38.1" x2="297.18" y2="38.1" width="0.1524" layer="91"/>
 <label x="287.02" y="38.1" size="1.778" layer="95"/>
@@ -15451,7 +16097,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="X2" gate="G$1" pin="IO13/A2_4"/>
 </segment>
 </net>
-<net name="VBUS" class="0">
+<net name="VBUS" class="5">
 <segment>
 <pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="U$3" gate="G$1" pin="VBUS"/>
@@ -15785,7 +16431,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="5V_REG" class="0">
+<net name="5V_REG" class="2">
 <segment>
 <wire x1="541.02" y1="160.02" x2="538.48" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="Q4" gate="G$1" pin="D"/>
@@ -15882,7 +16528,7 @@ Need to tie Pin#8 and #9</text>
 <label x="556.26" y="378.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="5V_SERVO" class="0">
+<net name="5V_SERVO" class="2">
 <segment>
 <pinref part="Q4" gate="G$1" pin="S"/>
 <wire x1="551.18" y1="160.02" x2="556.26" y2="160.02" width="0.1524" layer="91"/>
@@ -15970,7 +16616,7 @@ Need to tie Pin#8 and #9</text>
 <label x="142.24" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="WEIGHT_DATA_3" class="0">
+<net name="WEIGHT_DATA_3" class="3">
 <segment>
 <pinref part="U6" gate="U1" pin="DOUT"/>
 <wire x1="132.08" y1="365.76" x2="144.78" y2="365.76" width="0.1524" layer="91"/>
@@ -16069,7 +16715,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="U$5" gate="G$1" pin="JST4"/>
 </segment>
 </net>
-<net name="VDD" class="0">
+<net name="VDD" class="5">
 <segment>
 <pinref part="SUPPLY9" gate="VDD" pin="VDD"/>
 <wire x1="33.02" y1="228.6" x2="33.02" y2="226.06" width="0.1524" layer="91"/>
@@ -16120,7 +16766,7 @@ Need to tie Pin#8 and #9</text>
 <junction x="127" y="203.2"/>
 </segment>
 </net>
-<net name="WEIGHT_CLK_3" class="1">
+<net name="WEIGHT_CLK_3" class="3">
 <segment>
 <pinref part="U6" gate="U1" pin="PD_SCK"/>
 <wire x1="132.08" y1="360.68" x2="137.16" y2="360.68" width="0.1524" layer="91"/>
@@ -16309,7 +16955,7 @@ Need to tie Pin#8 and #9</text>
 <junction x="137.16" y="388.62"/>
 </segment>
 </net>
-<net name="OA1_1" class="0">
+<net name="OA1_1" class="4">
 <segment>
 <wire x1="311.15" y1="180.34" x2="318.77" y2="180.34" width="0.1524" layer="91"/>
 <label x="318.77" y="180.34" size="1.27" layer="95" xref="yes"/>
@@ -16321,7 +16967,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="347.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA2_1" class="0">
+<net name="OA2_1" class="4">
 <segment>
 <wire x1="311.15" y1="175.26" x2="318.77" y2="175.26" width="0.1524" layer="91"/>
 <label x="318.77" y="175.26" size="1.27" layer="95" xref="yes"/>
@@ -16333,7 +16979,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="345.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB2_1" class="0">
+<net name="OB2_1" class="4">
 <segment>
 <wire x1="311.15" y1="165.1" x2="318.77" y2="165.1" width="0.1524" layer="91"/>
 <label x="318.77" y="165.1" size="1.27" layer="95" xref="yes"/>
@@ -16345,7 +16991,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="340.36" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB1_1" class="0">
+<net name="OB1_1" class="4">
 <segment>
 <wire x1="311.15" y1="170.18" x2="318.77" y2="170.18" width="0.1524" layer="91"/>
 <label x="318.77" y="170.18" size="1.27" layer="95" xref="yes"/>
@@ -16483,7 +17129,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="IC1" gate="IC" pin="DIR"/>
 </segment>
 </net>
-<net name="STEP_1" class="0">
+<net name="STEP_1" class="3">
 <segment>
 <wire x1="270.51" y1="185.42" x2="261.62" y2="185.42" width="0.1524" layer="91"/>
 <label x="261.62" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -16625,14 +17271,14 @@ Need to tie Pin#8 and #9</text>
 <pinref part="IC2" gate="IC" pin="DIR"/>
 </segment>
 </net>
-<net name="STEP_2" class="0">
+<net name="STEP_2" class="3">
 <segment>
 <wire x1="270.51" y1="281.94" x2="261.62" y2="281.94" width="0.1524" layer="91"/>
 <label x="261.62" y="281.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC2" gate="IC" pin="STEP"/>
 </segment>
 </net>
-<net name="OA1_2" class="0">
+<net name="OA1_2" class="4">
 <segment>
 <wire x1="311.15" y1="276.86" x2="318.77" y2="276.86" width="0.1524" layer="91"/>
 <label x="318.77" y="276.86" size="1.27" layer="95" xref="yes"/>
@@ -16644,7 +17290,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="322.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA2_2" class="0">
+<net name="OA2_2" class="4">
 <segment>
 <wire x1="311.15" y1="271.78" x2="318.77" y2="271.78" width="0.1524" layer="91"/>
 <label x="318.77" y="271.78" size="1.27" layer="95" xref="yes"/>
@@ -16656,7 +17302,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="320.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB1_2" class="0">
+<net name="OB1_2" class="4">
 <segment>
 <wire x1="311.15" y1="266.7" x2="318.77" y2="266.7" width="0.1524" layer="91"/>
 <label x="318.77" y="266.7" size="1.27" layer="95" xref="yes"/>
@@ -16668,7 +17314,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="317.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB2_2" class="0">
+<net name="OB2_2" class="4">
 <segment>
 <wire x1="311.15" y1="261.62" x2="318.77" y2="261.62" width="0.1524" layer="91"/>
 <label x="318.77" y="261.62" size="1.27" layer="95" xref="yes"/>
@@ -16942,14 +17588,14 @@ Need to tie Pin#8 and #9</text>
 <pinref part="IC3" gate="IC" pin="DIR"/>
 </segment>
 </net>
-<net name="STEP_3" class="0">
+<net name="STEP_3" class="3">
 <segment>
 <wire x1="270.51" y1="378.46" x2="261.62" y2="378.46" width="0.1524" layer="91"/>
 <label x="261.62" y="378.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC3" gate="IC" pin="STEP"/>
 </segment>
 </net>
-<net name="OA1_3" class="0">
+<net name="OA1_3" class="4">
 <segment>
 <wire x1="311.15" y1="373.38" x2="318.77" y2="373.38" width="0.1524" layer="91"/>
 <label x="318.77" y="373.38" size="1.27" layer="95" xref="yes"/>
@@ -16961,7 +17607,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="297.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA2_3" class="0">
+<net name="OA2_3" class="4">
 <segment>
 <wire x1="311.15" y1="368.3" x2="318.77" y2="368.3" width="0.1524" layer="91"/>
 <label x="318.77" y="368.3" size="1.27" layer="95" xref="yes"/>
@@ -16973,7 +17619,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="294.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB1_3" class="0">
+<net name="OB1_3" class="4">
 <segment>
 <wire x1="311.15" y1="363.22" x2="318.77" y2="363.22" width="0.1524" layer="91"/>
 <label x="318.77" y="363.22" size="1.27" layer="95" xref="yes"/>
@@ -16985,7 +17631,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="292.1" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB2_3" class="0">
+<net name="OB2_3" class="4">
 <segment>
 <wire x1="311.15" y1="358.14" x2="318.77" y2="358.14" width="0.1524" layer="91"/>
 <label x="318.77" y="358.14" size="1.27" layer="95" xref="yes"/>
@@ -17034,14 +17680,14 @@ Need to tie Pin#8 and #9</text>
 <pinref part="IC4" gate="IC" pin="DIR"/>
 </segment>
 </net>
-<net name="STEP_4" class="0">
+<net name="STEP_4" class="3">
 <segment>
 <wire x1="422.91" y1="281.94" x2="414.02" y2="281.94" width="0.1524" layer="91"/>
 <label x="414.02" y="281.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC4" gate="IC" pin="STEP"/>
 </segment>
 </net>
-<net name="OB2_4" class="0">
+<net name="OB2_4" class="4">
 <segment>
 <wire x1="463.55" y1="261.62" x2="471.17" y2="261.62" width="0.1524" layer="91"/>
 <label x="471.17" y="261.62" size="1.27" layer="95" xref="yes"/>
@@ -17053,7 +17699,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="264.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB1_4" class="0">
+<net name="OB1_4" class="4">
 <segment>
 <wire x1="463.55" y1="266.7" x2="471.17" y2="266.7" width="0.1524" layer="91"/>
 <label x="471.17" y="266.7" size="1.27" layer="95" xref="yes"/>
@@ -17065,7 +17711,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="266.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA2_4" class="0">
+<net name="OA2_4" class="4">
 <segment>
 <wire x1="463.55" y1="271.78" x2="471.17" y2="271.78" width="0.1524" layer="91"/>
 <label x="471.17" y="271.78" size="1.27" layer="95" xref="yes"/>
@@ -17077,7 +17723,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="269.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA1_4" class="0">
+<net name="OA1_4" class="4">
 <segment>
 <wire x1="463.55" y1="276.86" x2="471.17" y2="276.86" width="0.1524" layer="91"/>
 <label x="471.17" y="276.86" size="1.27" layer="95" xref="yes"/>
@@ -17126,14 +17772,14 @@ Need to tie Pin#8 and #9</text>
 <pinref part="IC5" gate="IC" pin="DIR"/>
 </segment>
 </net>
-<net name="STEP_5" class="0">
+<net name="STEP_5" class="3">
 <segment>
 <wire x1="422.91" y1="378.46" x2="414.02" y2="378.46" width="0.1524" layer="91"/>
 <label x="414.02" y="378.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="IC5" gate="IC" pin="STEP"/>
 </segment>
 </net>
-<net name="OB2_5" class="0">
+<net name="OB2_5" class="4">
 <segment>
 <wire x1="463.55" y1="358.14" x2="471.17" y2="358.14" width="0.1524" layer="91"/>
 <label x="471.17" y="358.14" size="1.27" layer="95" xref="yes"/>
@@ -17145,7 +17791,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="238.76" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OB1_5" class="0">
+<net name="OB1_5" class="4">
 <segment>
 <wire x1="463.55" y1="363.22" x2="471.17" y2="363.22" width="0.1524" layer="91"/>
 <label x="471.17" y="363.22" size="1.27" layer="95" xref="yes"/>
@@ -17157,7 +17803,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="241.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA2_5" class="0">
+<net name="OA2_5" class="4">
 <segment>
 <wire x1="463.55" y1="368.3" x2="471.17" y2="368.3" width="0.1524" layer="91"/>
 <label x="471.17" y="368.3" size="1.27" layer="95" xref="yes"/>
@@ -17169,7 +17815,7 @@ Need to tie Pin#8 and #9</text>
 <label x="553.72" y="243.84" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="OA1_5" class="0">
+<net name="OA1_5" class="4">
 <segment>
 <wire x1="463.55" y1="373.38" x2="471.17" y2="373.38" width="0.1524" layer="91"/>
 <label x="471.17" y="373.38" size="1.27" layer="95" xref="yes"/>
@@ -17232,13 +17878,13 @@ Need to tie Pin#8 and #9</text>
 <pinref part="LIQUID_RELEASE_SW" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$33" class="0">
+<net name="N$33" class="1">
 <segment>
 <pinref part="R66" gate="G$1" pin="2"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
-<net name="N$36" class="0">
+<net name="N$36" class="1">
 <segment>
 <pinref part="R67" gate="G$1" pin="2"/>
 <pinref part="D2" gate="G$1" pin="A"/>
@@ -17270,7 +17916,7 @@ Need to tie Pin#8 and #9</text>
 <wire x1="-5.08" y1="99.06" x2="-2.54" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FAN_5V" class="0">
+<net name="FAN_5V" class="5">
 <segment>
 <pinref part="Q8" gate="Q2" pin="C"/>
 <wire x1="2.54" y1="104.14" x2="2.54" y2="106.68" width="0.1524" layer="91"/>
@@ -17282,7 +17928,7 @@ Need to tie Pin#8 and #9</text>
 <pinref part="FAN_" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="VIB_5V" class="0">
+<net name="VIB_5V" class="5">
 <segment>
 <pinref part="D6" gate="G$1" pin="C"/>
 <wire x1="12.7" y1="127" x2="12.7" y2="132.08" width="0.1524" layer="91"/>
@@ -17308,7 +17954,7 @@ Need to tie Pin#8 and #9</text>
 <label x="-17.78" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="12V_REG" class="0">
+<net name="12V_REG" class="2">
 <segment>
 <pinref part="12V_IN" gate="G$1" pin="1"/>
 <wire x1="558.8" y1="398.78" x2="556.26" y2="398.78" width="0.1524" layer="91"/>
@@ -17624,18 +18270,18 @@ Need to tie Pin#8 and #9</text>
 <wire x1="477.52" y1="124.46" x2="474.98" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="U$9" gate="G$1" pin="2"/>
 <wire x1="474.98" y1="124.46" x2="474.98" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$3" pin="2"/>
+<pinref part="R13" gate="G$1" pin="1"/>
 <junction x="477.52" y="124.46"/>
 </segment>
 </net>
-<net name="WEIGHT_DATA_1" class="0">
+<net name="WEIGHT_DATA_1" class="3">
 <segment>
 <pinref part="U4" gate="U1" pin="DOUT"/>
 <wire x1="121.92" y1="180.34" x2="134.62" y2="180.34" width="0.1524" layer="91"/>
 <label x="127" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="WEIGHT_CLK_1" class="1">
+<net name="WEIGHT_CLK_1" class="3">
 <segment>
 <pinref part="U4" gate="U1" pin="PD_SCK"/>
 <wire x1="121.92" y1="175.26" x2="127" y2="175.26" width="0.1524" layer="91"/>
@@ -17644,7 +18290,7 @@ Need to tie Pin#8 and #9</text>
 <label x="127" y="177.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="WEIGHT_CLK_2" class="1">
+<net name="WEIGHT_CLK_2" class="3">
 <segment>
 <pinref part="U5" gate="U1" pin="PD_SCK"/>
 <wire x1="124.46" y1="266.7" x2="129.54" y2="266.7" width="0.1524" layer="91"/>
@@ -17653,20 +18299,20 @@ Need to tie Pin#8 and #9</text>
 <label x="129.54" y="269.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="WEIGHT_DATA_2" class="0">
+<net name="WEIGHT_DATA_2" class="3">
 <segment>
 <pinref part="U5" gate="U1" pin="DOUT"/>
 <wire x1="124.46" y1="271.78" x2="137.16" y2="271.78" width="0.1524" layer="91"/>
 <label x="129.54" y="271.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$53" class="0">
+<net name="N$53" class="1">
 <segment>
 <pinref part="R70" gate="G$1" pin="2"/>
 <pinref part="D7" gate="G$1" pin="A"/>
 </segment>
 </net>
-<net name="N$55" class="0">
+<net name="N$55" class="1">
 <segment>
 <pinref part="R86" gate="G$1" pin="2"/>
 <pinref part="D8" gate="G$1" pin="A"/>
