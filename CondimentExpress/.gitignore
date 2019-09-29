@@ -1,6 +1,8 @@
 *
 !.gitignore
 !CMakeLists.txt
-!main/
+!main
 !Makefile
 !README.md
+!*.c
+!*.h
