@@ -8,13 +8,8 @@
 #include "gpio.h"
 
 void HX711_Init(const HX711* hx) {
-    gpio_pad_select_gpio(hx->dataPin);
-    gpio_set_direction(hx->dataPin, GPIO_MODE_INPUT);
-
-    gpio_pad_select_gpio(hx->clockPin);
-    gpio_set_direction(hx->clockPin, GPIO_MODE_OUTPUT);
-    //GPIO_SetPin(hx->dataPin, GPIO_MODE_INPUT);
-    //GPIO_SetPin(hx->clockPin, GPIO_MODE_OUTPUT);
+    GPIO_SetPin(hx->dataPin, GPIO_MODE_INPUT);
+    GPIO_SetPin(hx->clockPin, GPIO_MODE_OUTPUT);
 }
 
 uint32_t HX711_Read(const HX711* hx) {

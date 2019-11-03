@@ -35,7 +35,7 @@
  */
 #define LEDC_HS_TIMER          LEDC_TIMER_0
 #define LEDC_HS_MODE           LEDC_HIGH_SPEED_MODE
-#define LEDC_HS_CH0_GPIO       (18)
+#define LEDC_HS_CH0_GPIO       (21)
 #define LEDC_HS_CH0_CHANNEL    LEDC_CHANNEL_0
 #define LEDC_HS_CH1_GPIO       (19)
 #define LEDC_HS_CH1_CHANNEL    LEDC_CHANNEL_1
