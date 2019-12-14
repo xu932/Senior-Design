@@ -20,7 +20,7 @@
 #define I2C_EXAMPLE_MASTER_TX_BUF_DISABLE   0   /*!< I2C master do not need buffer */
 #define I2C_EXAMPLE_MASTER_RX_BUF_DISABLE   0   /*!< I2C master do not need buffer */
 
-static uint8_t letters[26][6] = {
+static uint8_t letters[27][6] = {
     {0x00, 0xfc, 0x22, 0x22, 0xfc, 0x00}, {0x00, 0xfe, 0x92, 0x92, 0x7c, 0x00}, {0x00, 0x7c, 0x82, 0x82, 0x44, 0x00},   // ABC
     {0x00, 0xfe, 0x82, 0x82, 0x7c, 0x00}, {0x00, 0xfe, 0x92, 0x92, 0x82, 0x00}, {0x00, 0xfe, 0x12, 0x12, 0x02, 0x00},   // DEF
     {0x00, 0x7c, 0x82, 0xa2, 0x64, 0x00}, {0x00, 0xfe, 0x10, 0x10, 0xfe, 0x00}, {0x00, 0x82, 0xfe, 0x82, 0x00, 0x00},   // GHI
@@ -29,7 +29,7 @@ static uint8_t letters[26][6] = {
     {0x00, 0xfe, 0x12, 0x12, 0x0c, 0x00}, {0x00, 0x7c, 0x82, 0x42, 0xbc, 0x00}, {0x00, 0xfe, 0x12, 0x12, 0xec, 0x00},   // PQR
     {0x00, 0x4c, 0x92, 0x92, 0x64, 0x00}, {0x00, 0x02, 0x02, 0xfe, 0x02, 0x02}, {0x00, 0x7e, 0x80, 0x80, 0x7e, 0x00},   // STU
     {0x00, 0x3e, 0x40, 0x80, 0x40, 0x3e}, {0x00, 0x7e, 0x80, 0x60, 0x80, 0x7e}, {0x00, 0xee, 0x10, 0x10, 0xee, 0x00},   // VWX
-    {0x00, 0x06, 0x08, 0xf0, 0x08, 0x06}, {0x00, 0xe2, 0x92, 0x92, 0x8e, 0x00}                                          // YZ
+    {0x00, 0x06, 0x08, 0xf0, 0x08, 0x06}, {0x00, 0xe2, 0x92, 0x92, 0x8e, 0x00}, {0x00, 0x00, 0x00, 0x00, 0x00, 0x00}    // YZ\s
 };
 
 static uint8_t buffer[SSD1305_LCDHEIGHT * SSD1305_LCDWIDTH / 8] = { 
@@ -106,26 +106,6 @@ static uint8_t buffer[SSD1305_LCDHEIGHT * SSD1305_LCDWIDTH / 8] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
-
-
-static char tag[] = "SSD1306-F";
-
-void init() {
-    ESP_LOGD(tag, ">> SSD1305");
-    i2c_config_t conf;
-    conf.mode = I2C_MODE_MASTER;
-    conf.sda_io_num = I2C_EXAMPLE_MASTER_SDA_IO;
-    conf.scl_io_num = I2C_EXAMPLE_MASTER_SCL_IO;
-    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
-    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
-    conf.master.clk_speed = I2C_EXAMPLE_MASTER_FREQ_HZ;
-    
-    int i2c_master_port = I2C_EXAMPLE_MASTER_NUM;
-    ESP_ERROR_CHECK(i2c_param_config(i2c_master_port, &conf));
-    ESP_ERROR_CHECK(i2c_driver_install(i2c_master_port, conf.mode,
-                       I2C_EXAMPLE_MASTER_RX_BUF_DISABLE,
-                       I2C_EXAMPLE_MASTER_TX_BUF_DISABLE, 0));
-}
 
 void command(uint8_t data) {
 //    esp_err_t ret;
@@ -208,28 +188,28 @@ void display() {
         }
     }
 
-    i = 0;
-    uint8_t j = 0;
-    for (page = 0; page < 2; page++) {
-        command(SSD1305_SETPAGESTART + page);
-        command(0x00);
-        command(0x10);
-        j = 0;
-        while (j < 13) {
-            cmd = i2c_cmd_link_create();
-            i2c_master_start(cmd);
-            i2c_master_write_byte(cmd, (SSD1305_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
-            i2c_master_write_byte(cmd, 0x40, true);
-            for (uint8_t x=0; x<6; x++) {
-                i2c_master_write_byte(cmd, letters[i][x], true);
-            }
-            i2c_master_stop(cmd);
-            i2c_master_cmd_begin(I2C_NUM_0, cmd, 100 / portTICK_RATE_MS);
-            i2c_cmd_link_delete(cmd);
-            i++;
-            j++;
-        }
-    }
+    // i = 0;
+    // uint8_t j = 0;
+    // for (page = 0; page < 2; page++) {
+    //     command(SSD1305_SETPAGESTART + page);
+    //     command(0x00);
+    //     command(0x10);
+    //     j = 0;
+    //     while (j < 13) {
+    //         cmd = i2c_cmd_link_create();
+    //         i2c_master_start(cmd);
+    //         i2c_master_write_byte(cmd, (SSD1305_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+    //         i2c_master_write_byte(cmd, 0x40, true);
+    //         for (uint8_t x=0; x<6; x++) {
+    //             i2c_master_write_byte(cmd, letters[i][x], true);
+    //         }
+    //         i2c_master_stop(cmd);
+    //         i2c_master_cmd_begin(I2C_NUM_0, cmd, 100 / portTICK_RATE_MS);
+    //         i2c_cmd_link_delete(cmd);
+    //         i++;
+    //         j++;
+    //     }
+    // }
 }
 
 void clear() {
@@ -255,11 +235,36 @@ void clear() {
     }
 }
 
+void printline(int page, char* str, int len) {
+    uint8_t i = 0;
+    uint8_t j = 0;
+    i2c_cmd_handle_t cmd;
+
+    command(SSD1305_SETPAGESTART + page);
+    command(0x00);
+    command(0x10);
+    while (j < len && j < 21 && str[j] != '\0') {
+        cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (SSD1305_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, 0x40, true);
+        i = str[j] == ' ' ? 26 : str[j] - 'A';
+        for (uint8_t x=0; x<6; x++) {
+            i2c_master_write_byte(cmd, letters[i][x], true);
+        }
+        i2c_master_stop(cmd);
+        i2c_master_cmd_begin(I2C_NUM_0, cmd, 100 / portTICK_RATE_MS);
+        i2c_cmd_link_delete(cmd);
+        j++;
+    }
+}
+
 void oled_main() {
-    init();
     begin();
     clear();
-    display();
+    // display();
+    //printline(1, "HELLO WORLD", 11);
+    //printline(7, "HELLO WORLD", 11);
     /*
     for (int i = 0; i < SSD1305_LCDHEIGHT * SSD1305_LCDWIDTH / 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -268,5 +273,4 @@ void oled_main() {
             vTaskDelay(3000 / portTICK_RATE_MS);
         }
     }*/
-
 }
